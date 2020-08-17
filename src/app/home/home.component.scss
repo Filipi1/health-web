@@ -1,0 +1,26 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.page-content {
+    padding: 20px 40px;
+}
+
+.sidenav {
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgb(219, 219, 219);
+}
+
+h1 {
+    color: rgb(100, 100, 100);
+}
+
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
