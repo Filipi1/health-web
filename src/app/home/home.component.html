@@ -1,4 +1,5 @@
-<mat-drawer-container class="container" autosize>
+<mat-drawer-container class="content" autosize>
+
     <mat-drawer #drawer class="sidenav" mode="side">
         <div style="padding: 20px">
             <p>Menu</p>
@@ -10,13 +11,29 @@
 
     </mat-drawer>
 
-    <div class="page-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
+    <div class="top-x">
+      <div class="row">
+        <div class="col-sm">
+          <button type="button" mat-button (click)="drawer.toggle()">
             <mat-icon aria-hidden="false">list</mat-icon>
-        </button>
+          </button>
+        </div>
+        <div class="col-sm">
+          One of three columns
+        </div>
+        <div class="col-sm">
+          <div class="image-picture">
+            F
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
+
+
 
         <br><br>
-
 
         <h1>Usuários</h1>
 
