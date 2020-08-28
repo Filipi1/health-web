@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { InputConfig, FormConfig, InputToForm } from 'src/share/form';
+import { InputConfig, FormConfig } from '../../share/form';
 
 @Component({
   selector: 'app-form',

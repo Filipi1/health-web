@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 //Angular Material Imports
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -17,8 +18,8 @@ import { TasksComponent } from './tasks/tasks.component';
 import { AuthComponent } from './auth/auth.component';
 
 import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { InputComponent } from './input/input.component';
-import { FormComponent } from './form/form.component';
+import { InputComponent } from '../components/input/input.component';
+import { FormComponent } from '../components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormComponent } from './form/form.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     NgxMaskModule.forRoot(),
     MatSidenavModule,
     MatIconModule,

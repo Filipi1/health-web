@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { InputConfig, FormConfig } from 'src/share/form';
+import { FormConfig } from 'src/share/form';
+import { AuthService } from 'src/services/auth.service'
+import { AuthModel } from 'src/share/auth';
 
 @Component({
   selector: 'app-auth',
@@ -8,9 +10,8 @@ import { InputConfig, FormConfig } from 'src/share/form';
 })
 export class AuthComponent implements OnInit {
 
-  teste: InputConfig = new InputConfig()
-
   formConfig: FormConfig = new FormConfig();
+  errors = []
 
   form = {
     "form": {
@@ -28,16 +29,18 @@ export class AuthComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(protected authService: AuthService) { }
 
-  fetchData(form: FormConfig) {
+  async fetchData(form: FormConfig) {
     this.formConfig = form;
+
+    var authModel: AuthModel = new AuthModel();
+    authModel.cpf = this.formConfig.form["cpf"].value;
+    authModel.password = this.formConfig.form["password"].value;
+
+    this.errors = await this.authService.login(authModel)
     console.log('RESULT: ', this.formConfig)
   }
 
-  ngOnInit(): void {
-    this.teste.title = "sergio";
-    this.teste.icon = "vpn_key";
-  }
-
+  ngOnInit(): void {}
 }
