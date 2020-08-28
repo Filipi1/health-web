@@ -1,0 +1,14 @@
+<ng-template #tutorial>
+    <h3>Tutorial</h3>
+    <ol>
+        <li>Você deve criar um FormConfig</li>
+        <li>Você deve criar um FormConfig</li>
+    </ol>
+</ng-template>
+
+<div *ngIf="formConfig; else tutorial">
+    <app-input *ngFor="let input of inputList" id="{{ input.title }}" [inputConfig]="input" (value)="insertValue($event)"></app-input>
+
+    <br>
+    <button (click)="submit()" mat-flat-button color="primary">Entrar</button>
+</div>

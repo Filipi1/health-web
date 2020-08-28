@@ -14,17 +14,26 @@ import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { TasksComponent } from './tasks/tasks.component';
+import { AuthComponent } from './auth/auth.component';
+
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { InputComponent } from './input/input.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TasksComponent
+    TasksComponent,
+    AuthComponent,
+    InputComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxMaskModule.forRoot(),
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,

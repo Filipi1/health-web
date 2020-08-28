@@ -1,0 +1,8 @@
+<br>
+
+<div class="input-box">
+    <mat-icon aria-hidden="false">{{ icon }}</mat-icon>
+    <input *ngIf="mask" [placeholder]="titulo" [mask]="mask" [(value)]="inputValue" (change)="sendValue($event)" > 
+    <input *ngIf="!mask" [placeholder]="titulo" [type]="type" [(value)]="inputValue" (change)="sendValue($event)" > 
+    <div *ngIf="error_message"><br><label>{{ error_message }}</label><br><br></div>
+</div>

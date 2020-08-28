@@ -1,0 +1,28 @@
+input {
+    padding: 10px 20px 10px 45px;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow .3s;
+    color: gray;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgb(211, 211, 211);
+}
+
+.input-box {
+    mat-icon {
+        transform: matrix(1, 0, 0, 1, 33, 7);
+        color: gray;
+    }
+
+    label {
+        color: red;
+        background-color: rgb(246, 219, 219);
+        padding: 5px 30px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+}
