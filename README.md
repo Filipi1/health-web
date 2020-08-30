@@ -8,4 +8,4 @@ Para rodar o projeto, primeiramente instale suas dependencias com `npm i`, em se
 
 ## Aviso
 
-O projeto do heath-web utiliza o backend heath-api.
+O projeto do heath-web utiliza o backend [heath-api](https://github.com/Filipi1/heath-api).
