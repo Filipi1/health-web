@@ -1,4 +1,4 @@
-# Heath
+# Health
 
 Este projeto foi criado com o Framework [Angular CLI](https://github.com/angular/angular-cli) na versão 10.0.6.
 
