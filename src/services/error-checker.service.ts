@@ -11,7 +11,7 @@ export class ErrorCheckerService {
 
   checkError(error) : string[] {
     if (error?.error?.message != null) {
-      this.errorMessage.push(error.error.message);
+      this.errorMessage = [ error.error.message ];
       return this.errorMessage;
     }
 

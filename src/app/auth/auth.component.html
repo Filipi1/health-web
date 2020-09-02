@@ -1,8 +1,6 @@
 <div class="login-box">
     <div align="center">
-        <div *ngIf="errors.length > 0" class="alert" style="text-align: center">
-            <label *ngFor="let error of errors; let i = index">{{i + 1}} - {{ error }}<br></label>
-        </div>
+        <app-alert [messages]="errors"></app-alert>
         <app-form [formConfig]="form" (value)="fetchData($event)"></app-form>
     </div>
 </div>

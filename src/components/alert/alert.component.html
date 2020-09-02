@@ -1,0 +1,7 @@
+<ng-template #success>
+    <div class="">teste</div>
+</ng-template>
+
+<div *ngIf="messages.length > 0 && ready" class="alert" [ngClass]="{'ok': result}" style="text-align: center">
+    <label *ngFor="let message of messages; let i = index">{{i + 1}} - {{ message }}<br></label>
+</div>

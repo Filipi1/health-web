@@ -14,12 +14,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
 import { TasksComponent } from './tasks/tasks.component';
 import { AuthComponent } from './auth/auth.component';
 
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+
+// PERSONAL COMPONENTS
 import { InputComponent } from '../components/input/input.component';
 import { FormComponent } from '../components/form/form.component';
+import { ErrorAlertComponent } from '../components/alert/alert.component';
+import { DataTableComponent } from '../components/data-table/data-table.component';
+
+//PROVIDERS
+import { CustomPaginator } from '../providers/custom-paginator.provider'
 
 @NgModule({
   declarations: [
@@ -29,6 +37,8 @@ import { FormComponent } from '../components/form/form.component';
     AuthComponent,
     InputComponent,
     FormComponent,
+    ErrorAlertComponent,
+    DataTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,9 +51,10 @@ import { FormComponent } from '../components/form/form.component';
     MatButtonModule,
     MatTableModule,
     MatGridListModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [{provide: MatPaginatorIntl, useClass: CustomPaginator}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

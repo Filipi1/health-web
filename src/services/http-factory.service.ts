@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment'
 export class HttpFactoryService {
 
   private route: string = ""
+  private token: string = localStorage.getItem('token')
 
   constructor(protected http: HttpClient, protected controller: string) { 
     this.route = environment.apiUrl + controller
@@ -16,7 +17,7 @@ export class HttpFactoryService {
   private getHeaders() : HttpHeaders {
     const headers: HttpHeaders = new HttpHeaders()
       .append("content-type", "application/json")
-      .append("authorization", "Bearer " + localStorage.getItem("token") || "")
+      .append("authorization", "Bearer " + this.token.split('"').join("") || "")
     return headers
   }
 

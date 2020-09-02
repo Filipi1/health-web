@@ -1,0 +1,19 @@
+@import "../../theme.scss";
+
+.ok {
+    background-color: $okColor !important;
+}
+
+.error {
+    background-color: $errorColor !important;
+}
+
+.alert {
+    padding: 15px 10px;
+    border-radius: 5px;
+    background-color: $errorColor;
+    color: white;
+    font-weight: 800;
+    text-align: start;
+    font-size: 12px;
+}
